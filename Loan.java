@@ -24,4 +24,25 @@ public class Loan
        this.daysToFund = daysToFund; 
        this.numLenders = numLenders; 
     } 
+    // accessors
+    public int getID()
+    {
+        return ID; 
+    }
+    public double getloanAmount()
+    {
+        return loanAmount; 
+    } 
+    public String getcountry()
+    {
+        return country; 
+    } 
+    public int getdaysToFund()
+    {
+        return daysToFund; 
+    }  
+    public int getnumLenders()
+    {
+        return numLenders; 
+    }
 }
