@@ -23,7 +23,5 @@ public class Loan
        this.country = country; 
        this.daysToFund = daysToFund; 
        this.numLenders = numLenders; 
-    }
-
-    
+    } 
 }
