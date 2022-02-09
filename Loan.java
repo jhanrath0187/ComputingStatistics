@@ -25,7 +25,7 @@ public class Loan
        this.numLenders = numLenders; 
     } 
     // accessors
-    public  int getID()
+    public int getID()
     {
         return ID; 
     }
@@ -44,5 +44,26 @@ public class Loan
     public int getNumLenders()
     {
         return numLenders; 
+    }
+    //modifiers
+    public void setID(int newID)
+    {
+        this.ID = newID; 
+    }
+    public void setLoanAmount(double newLoanAmount)
+    {
+        this.loanAmount = newLoanAmount; 
+    }
+    public void setCountry(String newCountry)
+    {
+        this.country = newCountry; 
+    }
+    public void setDaysToFund(int newDaysToFund)
+    {
+        this.daysToFund = newDaysToFund; 
+    }
+    public void setNumLenders(int newNumLenders)
+    {
+        this.numLenders = newNumLenders; 
     }
 }
