@@ -67,10 +67,6 @@ public class Loan
     }
     //toString 
     public String toString(){
-<<<<<<< HEAD
         return "ID: "+ID+" loan amount: "+loanAmount+" country : "+country+" days to fund "+daysToFund +" num lenders: "+numLenders;
-=======
-        return "ID: "+ID+" loan amount: "+loanAmount+" country : "+country+" days to fund "+daysToFund +" num lenders: "+numLenders; 
->>>>>>> c644a68cadd3de728147ad5954ebc450c89876bb
     }
 }
