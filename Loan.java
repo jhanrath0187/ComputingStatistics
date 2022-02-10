@@ -66,4 +66,9 @@ public class Loan
     {
         this.numLenders = newNumLenders; 
     }
+    //toString 
+    public String toString()
+    {
+        return "ID: " + ID + " loan amount: " + loanAmount + " country : " + country + " days to fund " + daysToFund + " num lenders: " + numLenders; 
+    }
 }
