@@ -19,7 +19,6 @@ public class ComputingStatistics {
    public ComputingStatistics(ArrayList<Loan> d) {
       data = d;
    }
-   
    /**
     * Calclates the total amount funded from all of the loans in the file.
     * @return the total loan amount.
