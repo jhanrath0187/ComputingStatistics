@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 public class ComputingStatistics {
    /**
    * The ArrayList containing all of the loan data.
