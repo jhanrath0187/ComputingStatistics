@@ -33,4 +33,11 @@ public class ComputingStatistics {
       }
       return amount;
    }
+   public double avgLoan(){
+       //average loan taken by total amount divided by number of loans
+       double avg=0.0;
+       Loan loan;
+       avg=this.totalAmount()/data.size();
+       return avg;
+   }
 }
