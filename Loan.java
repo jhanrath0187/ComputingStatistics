@@ -62,13 +62,11 @@ public class Loan
     {
         this.daysToFund = newDaysToFund; 
     }
-    public void setNumLenders(int newNumLenders)
-    {
-        this.numLenders = newNumLenders; 
+    public void setNumLenders(int newNumLenders){
+        this.numLenders=newNumLenders; 
     }
     //toString 
-    public String toString()
-    {
-        return "ID: " + ID + " loan amount: " + loanAmount + " country: " + country + " days to fund: " + daysToFund + " num lenders: " + numLenders; 
+    public String toString(){
+        return "ID: "+ID+" loan amount: "+loanAmount+" country : "+country+" days to fund "+daysToFund +" num lenders: "+numLenders;
     }
 }
