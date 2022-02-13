@@ -18,6 +18,7 @@ public class ComputingStatistics {
    public ComputingStatistics(ArrayList<Loan> d) {
       data = d;
    }
+   
    /**
     * Calclates the total amount funded from all of the loans in the file.
     * @return the total loan amount.
@@ -31,6 +32,7 @@ public class ComputingStatistics {
       }
       return amount;
    }
+   
    public double avgLoan(){
        //average loan taken by total amount divided by number of loans
        double avg=0.0;
@@ -38,6 +40,7 @@ public class ComputingStatistics {
        avg=this.totalAmount()/data.size();
        return avg;
    }
+   
    public double largestLoan() {
       double largestLoan = 0.0;
       Loan loan;
@@ -48,7 +51,8 @@ public class ComputingStatistics {
       }
       return largestLoan;
    }
-      public double smallestLoan() {
+   
+    public double smallestLoan() {
       double smallestLoan = 100000.0;
       Loan loan;
       for(int i = 0; i < data.size(); i++) {
@@ -58,6 +62,21 @@ public class ComputingStatistics {
       }
       return smallestLoan;
    }
+   
+      public double avgDaysToFund()
+    {   
+     double total = 0.0;
+     double avg;
+     Loan loan;
+     for(int i = 0; i < data.size(); i++) 
+     {
+         loan = data.get(i);
+         total += loan.getLoanAmount();
+     }
+     avg = total / (data.size() * 100);
+     return avg;
+    }
+   
    public double largestLoan(String country)
    {
       double largestLoan = 0.0;
