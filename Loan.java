@@ -60,7 +60,7 @@ public class Loan
     }
     public void setDaysToFund(int newDaysToFund)
     {
-        this.daysToFund = newDaysToFund; 
+        this.daysToFund = newDaysToFund;// /86400?; 
     }
     public void setNumLenders(int newNumLenders){
         this.numLenders=newNumLenders; 
