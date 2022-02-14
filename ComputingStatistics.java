@@ -205,4 +205,10 @@ public class ComputingStatistics {
         strDev = Math.sqrt(variance());
         return strDev;
     }
+   public boolean empiralRule(){
+       /**
+        * need if-statement...
+        */
+       return true;
+   }
 }
