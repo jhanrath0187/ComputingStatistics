@@ -205,10 +205,38 @@ public class ComputingStatistics {
         strDev = Math.sqrt(variance());
         return strDev;
     }
-   public boolean empiralRule(){
-       /**
-        * need if-statement...
-        */
+    
+   public boolean empiricalRule(){
+       Loan loan; 
+       double mean = 0;
+       double sum = 0; 
+       double stan1_1 = 0; 
+       double stan1_2 = 0; 
+       double stan2_1 = 0; 
+       double stan2_2 = 0; 
+       double stan3_1 = 0;
+       double stan3_2 = 0; 
+       int count = 0; 
+       for (int i = 0; i < data.size(); i++)
+       {
+           loan = data.get(i); 
+           sum += loan.getLoanAmount(); 
+       }
+       mean = (sum / data.size());
+       stan1_1 = mean - standardDeviation(); 
+       stan1_2 = mean + standardDeviation(); 
+       stan2_1 = mean - standardDeviation(); 
+       stan2_2 = mean + standardDeviation(); 
+       stan3_1 = mean - standardDeviation(); 
+       stan3_2 = mean + standardDeviation(); 
+       for (int n = 0; n < data.size(); n++)
+       {
+           loan = data.get(n); 
+           if (loan.getLoanAmount() > stan1_1 && loan.getLoanAmount() < stan2_2)
+           {
+               count++; 
+           }
+       }
        return true;
    }
 }
