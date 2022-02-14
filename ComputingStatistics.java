@@ -91,4 +91,39 @@ public class ComputingStatistics {
       }
       return largestLoan;
    }
-}
+   
+   public String smallestLoanCountry() 
+   {
+       String smallestCountry = ""; 
+       Loan small = data.get(0);
+       Loan loan; 
+       for (int i = 1; i < data.size(); i++)
+       {
+           loan = data.get(i);
+           if (loan.getLoanAmount() < small.getLoanAmount())
+           {
+               small = loan; 
+           }
+       }
+       smallestCountry = small.getCountry(); 
+       return smallestCountry; 
+   }
+   
+   public String largestLoanCountry() 
+   {
+       String largestCountry = ""; 
+       Loan large = data.get(0); 
+       Loan loan; 
+       for (int i = 1; i < data.size(); i++)
+       {
+           loan = data.get(i); 
+           if (loan.getLoanAmount() > large.getLoanAmount())
+           {
+               large = loan; 
+           } 
+       }
+       largestCountry = large.getCountry(); 
+       return largestCountry;
+   }
+
+   }
