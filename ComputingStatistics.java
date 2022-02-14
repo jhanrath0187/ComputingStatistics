@@ -161,16 +161,16 @@ public class ComputingStatistics {
    
    public int loansFunded(String countryNm)
    {
-       int sum = 0; 
+       int count = 0; 
        Loan loan; 
        for (int i = 0; i < data.size(); i++)
        {
            loan = data.get(i); 
            if (loan.getCountry().equals(countryNm))
            {
-               sum += loan.getLoanAmount(); 
+               count++; 
            }         
        }
-       return sum; 
+       return count; 
    }
 }
