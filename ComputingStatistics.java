@@ -198,4 +198,11 @@ public class ComputingStatistics {
        var = sum2 / data.size(); 
        return var; 
    }
+   
+   public double standardDeviation()
+   {
+        double strDev = 0;
+        strDev = Math.sqrt(variance());
+        return strDev;
+    }
 }
