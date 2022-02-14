@@ -40,12 +40,22 @@ public class ComputingStatistics {
        avg=this.totalAmount()/data.size();
        return avg;
    }
-   public double avgLoan(String country){
-       //average loan taken by total amount divided by number of loans
+   public double avgLoan(String countryNm){
+       //average loan of a specific country
        double avg=0.0;
+       double count=0.0;
        Loan loan;
-       avg=this.totalAmount()/data.size();
-       return avg;
+       for (int i=0;i<data.size();i++)
+       {
+           loan = data.get(i); 
+           if (loan.getCountry().equals(countryNm))
+           {
+               avg+=loan.getLoanAmount(); 
+               count+=1.0;
+           }         
+       }
+       avg/=count;
+       return avg; 
    }
    public double largestLoan() {
       double largestLoan = 0.0;
@@ -83,13 +93,13 @@ public class ComputingStatistics {
      return avg;
     }
    
-   public double largestLoan(String country)
+   public double largestLoan(String countryNm)
    {
       double largestLoan = 0.0;
       Loan loan;
       for(int i = 0; i < data.size(); i++) {
          loan = data.get(i);
-         if ((loan.getCountry()).equals(country))
+         if ((loan.getCountry()).equals(countryNm))
          {
              if (loan.getLoanAmount() > largestLoan)
                  largestLoan = loan.getLoanAmount();
