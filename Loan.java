@@ -39,7 +39,7 @@ public class Loan
     } 
     public int getDaysToFund()
     {
-        return daysToFund/86400; 
+        return daysToFund; 
     }  
     public int getNumLenders()
     {
