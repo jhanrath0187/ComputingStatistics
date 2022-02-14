@@ -40,7 +40,13 @@ public class ComputingStatistics {
        avg=this.totalAmount()/data.size();
        return avg;
    }
-   
+   public double avgLoan(String country){
+       //average loan taken by total amount divided by number of loans
+       double avg=0.0;
+       Loan loan;
+       avg=this.totalAmount()/data.size();
+       return avg;
+   }
    public double largestLoan() {
       double largestLoan = 0.0;
       Loan loan;
