@@ -173,4 +173,29 @@ public class ComputingStatistics {
        }
        return count; 
    }
+   
+   public double variance()
+   {
+       double mean = 0; 
+       double sum = 0; 
+       double sum2 = 0; 
+       double diff2 = 0; 
+       double var = 0; 
+       Loan loan; 
+       Loan loan2; 
+       for (int i = 0; i < data.size(); i++)
+       {
+           loan = data.get(i); 
+           sum += loan.getLoanAmount(); 
+       }
+       mean = (sum / data.size()); 
+       for (int n = 0; n < data.size(); n++)
+       {
+           loan2 = data.get(n); 
+           diff2 = (loan2.getLoanAmount() - mean) * (loan2.getLoanAmount() - mean);
+           sum2 += diff2; 
+       }
+       var = sum2 / data.size(); 
+       return var; 
+   }
 }
