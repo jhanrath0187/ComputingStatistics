@@ -125,5 +125,36 @@ public class ComputingStatistics {
        largestCountry = large.getCountry(); 
        return largestCountry;
    }
-
+   
+   public String longestToFundCountry()
+   {
+       String country = ""; 
+       Loan large = data.get(0); 
+       Loan loan; 
+       for (int i = 1; i < data.size(); i++)
+       {
+           loan = data.get(i);
+           if (loan.getDaysToFund() > large.getDaysToFund())
+           {
+              large = loan;  
+           }
+       }
+       country = large.getCountry(); 
+       return country; 
    }
+   
+   public int loansFunded(String countryNm)
+   {
+       int sum = 0; 
+       Loan loan; 
+       for (int i = 0; i < data.size(); i++)
+       {
+           loan = data.get(i); 
+           if (loan.getCountry().equals(countryNm))
+           {
+               sum += loan.getLoanAmount(); 
+           }         
+       }
+       return sum; 
+   }
+}
