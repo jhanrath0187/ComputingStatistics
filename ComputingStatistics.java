@@ -208,35 +208,38 @@ public class ComputingStatistics {
     
    public boolean empiricalRule(){
        Loan loan; 
+       Loan loan1; 
        double mean = 0;
-       double sum = 0; 
-       double stan1_1 = 0; 
-       double stan1_2 = 0; 
-       double stan2_1 = 0; 
-       double stan2_2 = 0; 
-       double stan3_1 = 0;
-       double stan3_2 = 0; 
-       int count = 0; 
+       double sum = 0;   
+       double count = 0; 
        for (int i = 0; i < data.size(); i++)
        {
            loan = data.get(i); 
            sum += loan.getLoanAmount(); 
        }
        mean = (sum / data.size());
-       stan1_1 = mean - standardDeviation(); 
-       stan1_2 = mean + standardDeviation(); 
-       stan2_1 = mean - standardDeviation(); 
-       stan2_2 = mean + standardDeviation(); 
-       stan3_1 = mean - standardDeviation(); 
-       stan3_2 = mean + standardDeviation(); 
+       double stan1_1 = mean - standardDeviation(); 
+       double stan1_2 = mean + standardDeviation(); 
+       double stan2_1 = mean - (2 * standardDeviation()); 
+       double stan2_2 = mean + (2 * standardDeviation()); 
+       double stan3_1 = mean - (3 * standardDeviation()); 
+       double stan3_2 = mean + (3 * standardDeviation()); 
        for (int n = 0; n < data.size(); n++)
        {
-           loan = data.get(n); 
-           if (loan.getLoanAmount() > stan1_1 && loan.getLoanAmount() < stan2_2)
+           loan1 = data.get(n); 
+           if (loan1.getLoanAmount() > stan1_1 && loan1.getLoanAmount() < stan1_2)
            {
                count++; 
            }
        }
-       return true;
-   }
+       double per = (count) / (data.size()); 
+       if (per > 0.68)
+       {
+           return true; 
+       }
+       else 
+       {
+           return false; 
+       }
+    }
 }

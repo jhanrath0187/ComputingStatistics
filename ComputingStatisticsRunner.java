@@ -37,7 +37,7 @@ public class ComputingStatisticsRunner {
       
        System.out.println("Variance: " + analysis.variance());                       //Level 3 Question 1
        System.out.println("Standard deviation: " + analysis.standardDeviation());    //Level 3 Question 2
-//       System.out.println("Empirical rule (yes/no): " + analysis.empiricalRule());   //Level 3 Question 3
+       System.out.println("Empirical rule (yes/no): " + analysis.empiricalRule());   //Level 3 Question 3
    }
    
    
